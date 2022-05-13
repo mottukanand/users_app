@@ -40,3 +40,7 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.marginR {
+  margin-right: 1rem !important;
+}
