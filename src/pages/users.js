@@ -30,7 +30,7 @@ function Users() {
           {usersData && usersData.length
             ? usersData.map((user, index) => (
                 <Card
-                  className="shadow p-3 mb-4 mt-4 bg-white rounded"
+                  className="shadow p-1 mb-4 mt-4 bg-white rounded"
                   key={index}
                 >
                   <Card.Body>
@@ -44,34 +44,40 @@ function Users() {
                         />
                       </Col>
                       <Col>
-                        <Card.Title tag="h5" className="my-2 fw-bold">
+                        <Card.Title tag="h5" className="mb-4 fw-bold">
                           {user.name}
                         </Card.Title>
-                        <Card.Subtitle className="mb-2 " tag="h6">
-                          <div className="my-2 d-flex">
+                        <Card.Subtitle className="mb-3" tag="h6">
+                          <div className="mb-7 d-flex">
                             <div className="fw-bold marginR">Email: </div>
-                            <div className="fst-italic">{user.email}</div>
-                          </div>
-                          <div className="my-2 d-flex">
-                            <div className="fw-bold marginR">Phone: </div>
-                            <div className="fst-italic">{user.phone}</div>
-                          </div>
-                          <div className="my-2  d-flex">
-                            <div className="fw-bold marginR">Company: </div>
-                            <div className="fst-italic">
-                              {user.company && user.company.name
-                                ? user.company.name
-                                : null}
+                            <div className="fw-light">
+                              {user.email ? user.email : "N/A"}
                             </div>
                           </div>
-                          <div className="my-2  d-flex">
+                          <div className="mb-7 d-flex">
+                            <div className="fw-bold marginR">Phone: </div>
+                            <div className="fw-light">
+                              {user.phone ? user.phone : "N/A"}
+                            </div>
+                          </div>
+                          <div className="mb-7  d-flex">
+                            <div className="fw-bold marginR">Company: </div>
+                            <div className="fw-light">
+                              {user.company && user.company.name
+                                ? user.company.name
+                                : "N/A"}
+                            </div>
+                          </div>
+                          <div className="mb-7  d-flex">
                             <div className="fw-bold marginR">Website: </div>
-                            <div className="fst-italic">{user.website}</div>
+                            <div className="fw-light">
+                              {user.website ? user.website : "N/A"}
+                            </div>
                           </div>
 
-                          <div className="my-2  d-flex">
+                          <div className="mb-7  d-flex">
                             <div className="fw-bold marginR">Address: </div>
-                            <div className="fst-italic">
+                            <div className="fw-light">
                               {user.address && user.address.suite
                                 ? user.address.suite
                                 : null}
